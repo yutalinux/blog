@@ -10,7 +10,7 @@ body {
 }
 
 main {
-  @apply py-2 max-w-[800px] w-full mx-auto flex flex-col gap-6;
+  @apply py-4 max-w-[800px] w-full mx-auto flex flex-col gap-6;
 }
 
 article {
