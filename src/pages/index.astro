@@ -1,10 +1,9 @@
 ---
-import { getCollection } from "astro:content";
+import { getBlog } from "../utils/getBlog";
 import Layout from "../layouts/Layout.astro";
 import "../styles/blog.css";
 
-const pages: any[] = await getCollection("blog");
-pages.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+let pages: any[] = await getBlog();
 ---
 
 <Layout title="Blog">

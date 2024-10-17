@@ -1,9 +1,10 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getBlog } from "../utils/getBlog";
+import { type CollectionEntry } from "astro:content";
 import BlogPage from "../layouts/BlogPage.astro";
 
 export async function getStaticPaths() {
-  const pages: any[] = await getCollection("blog");
+  let pages: any[] = await getBlog();
 
   return pages.map((page) => {
     return {

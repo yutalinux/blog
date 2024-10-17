@@ -2,7 +2,7 @@
 import Layout from "./Layout.astro";
 import "../styles/blog.css";
 
-const { title, description, pubDate, updatedDate } = Astro.props;
+const { title, description, pubDate, updatedDate, tags } = Astro.props;
 ---
 
 <Layout title={title}>
@@ -17,6 +17,14 @@ const { title, description, pubDate, updatedDate } = Astro.props;
         <time datetime={updatedDate.toISOString()}>
           更新日{updatedDate.toLocaleDateString("ja-jp")}
         </time>
+      </p>
+      <p>
+        タグ:
+        {
+          tags.map((tag: string) => {
+            return <span>#{tag}</span>;
+          })
+        }
       </p>
       <hr />
     </header>
