@@ -9,13 +9,7 @@ console.log(pages);
 <Layout title="Blog">
   {
     pages.map((page) => {
-      return (
-        <a href={`/blog/${page.slug}`}>
-          <div>
-            <h3>{page.data.title}</h3>
-          </div>
-        </a>
-      );
+      return <a href={`/blog/${page.slug}`}>{page.data.title}</a>;
     })
   }
 </Layout>
