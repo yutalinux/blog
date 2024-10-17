@@ -1,7 +1,8 @@
 ---
 import Layout from "./Layout.astro";
+import "../styles/blog.css";
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate } = Astro.props;
 ---
 
 <Layout title={title}>
@@ -9,25 +10,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <article>
       <header>
         <h1>{title}</h1>
+        <p>{description}</p>
+        <p class="mt-2 flex gap-4">
+          <time datetime={pubDate.toISOString()}
+            >公開日{pubDate.toLocaleDateString("ja-jp")}</time
+          >
+          <time datetime={updatedDate.toISOString()}
+            >更新日{updatedDate.toLocaleDateString("ja-jp")}</time
+          >
+        </p>
         <hr />
       </header>
       <slot />
     </article>
   </main>
 </Layout>
-
-<style>
-  main {
-    padding-block: 10px;
-    width: max(800px, 80vw);
-    margin: auto;
-  }
-
-  article {
-    padding-inline: 24px;
-  }
-
-  h1 {
-    font-size: 36px;
-  }
-</style>

@@ -1,15 +1,27 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
+import "../styles/blog.css";
+
 const pages: any[] = await getCollection("blog");
+pages.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 console.log(pages);
 ---
 
 <Layout title="Blog">
-  {
-    pages.map((page) => {
-      return <a href={`/blog/${page.slug}`}>{page.data.title}</a>;
-    })
-  }
+  <main>
+    <h1>記事一覧</h1>
+    <ul>
+      {
+        pages.map((page) => {
+          return (
+            <li>
+              <a href={`/blog/${page.slug}`}>{page.data.title}</a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </main>
 </Layout>

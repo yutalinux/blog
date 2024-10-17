@@ -1,0 +1,60 @@
+body {
+  @apply bg-neutral-950;
+}
+
+main * {
+  @apply text-base text-neutral-200;
+}
+
+main {
+  @apply py-2 w-[max(800px,80vw)] mx-auto;
+}
+
+article {
+  @apply px-6;
+}
+
+a {
+  @apply text-emerald-600;
+}
+
+pre {
+  @apply p-5;
+}
+
+ul,
+ol {
+  @apply pl-5;
+}
+
+ul li {
+  @apply list-disc;
+}
+
+ol li {
+  @apply list-decimal;
+}
+
+h1 {
+  @apply text-5xl my-4;
+}
+
+h2 {
+  @apply text-4xl my-4 py-1 px-4 bg-neutral-900 border-l-4 border-emerald-500;
+}
+
+h3 {
+  @apply text-3xl;
+}
+
+h4 {
+  @apply text-2xl;
+}
+
+h5 {
+  @apply text-xl;
+}
+
+h6 {
+  @apply text-lg;
+}
