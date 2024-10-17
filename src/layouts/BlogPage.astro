@@ -1,15 +1,18 @@
 ---
 import Layout from "./Layout.astro";
 import ArticleHeader from "../components/ArticleHeader.astro";
-import "../styles/blog.css";
 
 const { title, description, pubDate, updatedDate, tags, slug } = Astro.props;
 ---
 
 <Layout title={title}>
-  <article>
+  <article class="blog-article">
+    <a href="#top" class="top-button">
+      <img src="/blog/arrow-upward.svg" />
+    </a>
     <ArticleHeader {...Astro.props} />
     <hr />
+    <h2>目次</h2>
     <slot />
   </article>
 </Layout>
