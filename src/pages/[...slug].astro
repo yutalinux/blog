@@ -22,6 +22,6 @@ const page = Astro.props;
 const { Content } = await page.render();
 ---
 
-<BlogPage {...page.data}>
+<BlogPage {...page.data} slug={page.slug}>
   <Content />
 </BlogPage>

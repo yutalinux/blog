@@ -1,9 +1,9 @@
-body {
-  @apply bg-neutral-950;
+* {
+  @apply text-base text-neutral-200;
 }
 
-main * {
-  @apply text-base text-neutral-200;
+body {
+  @apply bg-neutral-950;
 }
 
 main {
@@ -40,21 +40,28 @@ h1 {
 }
 
 h2 {
-  @apply text-4xl my-4 py-1 px-4 bg-neutral-900 border-l-4 border-emerald-500;
+  @apply text-4xl my-4 py-1 px-4 bg-neutral-900 border-l-4 border-emerald-600;
 }
 
 h3 {
-  @apply text-3xl;
+  @apply text-3xl my-3 py-1 px-4 bg-neutral-900 border-l-4 border-emerald-800;
 }
 
 h4 {
-  @apply text-2xl;
+  @apply text-2xl my-3 py-1 px-4 bg-neutral-900 border-l-4 border-emerald-800;
 }
 
-h5 {
-  @apply text-xl;
+blockquote {
+  @apply relative border-l-4 border-emerald-800 pl-2;
 }
 
-h6 {
-  @apply text-lg;
+blockquote:before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  mask-image: url("/blog/format-quote.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
 }
