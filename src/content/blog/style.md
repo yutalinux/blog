@@ -14,7 +14,7 @@ tags: ["development"]
 
 カタカナ
 
-ｶﾀｶﾅ 2
+ｶﾀｶﾅ
 
 Alphabet
 
