@@ -2,12 +2,14 @@
 import Layout from "./Layout.astro";
 import ArticleHeader from "../components/ArticleHeader.astro";
 import ArticleList from "../components/ArticleList.astro";
+import CodeBlock from "../components/CodeBlock.astro";
 
 const { title, description, pubDate, updatedDate, tags, slug } = Astro.props;
 ---
 
 <Layout title={title}>
   <article class="blog-article">
+    <CodeBlock />
     <a href="#top" class="top-button">
       <img src="/blog/arrow-upward.svg" />
     </a>

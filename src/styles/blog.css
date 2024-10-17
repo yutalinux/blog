@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 
 * {
-  @apply z-[20];
+  @apply z-[5];
+  @apply relative;
 }
 
 body {
@@ -31,7 +32,11 @@ article {
   }
 
   pre {
-    @apply p-5;
+    @apply p-5 relative;
+  }
+
+  pre .copy-code {
+    @apply absolute right-0 top-0 bg-blue-900 px-1;
   }
 
   ul,
