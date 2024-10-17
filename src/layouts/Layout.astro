@@ -23,14 +23,12 @@ const { title } = Astro.props;
   </head>
   <body class="flex flex-col min-h-screen" id="top">
     <SmoothScroll />
-    <header>
-      <HeaderMenu />
-    </header>
+    <HeaderMenu />
     <main class="flex-1">
       <slot />
     </main>
     <footer
-      class="flex justify-center bottom-0 h-20 items-center bg-gray-900/50"
+      class="flex justify-center bottom-0 h-20 items-center bg-gray-900/50 z-0"
     >
       <p>
         <small>&copy; Yuta 2024</small>

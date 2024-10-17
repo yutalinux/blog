@@ -1,6 +1,7 @@
 ---
 import { getBlog } from "../utils/getBlog";
 import Layout from "../layouts/Layout.astro";
+import ArticleList from "../components/ArticleList.astro";
 
 let pages: any[] = await getBlog();
 ---
@@ -8,32 +9,7 @@ let pages: any[] = await getBlog();
 <Layout title="Blog">
   <article>
     <h1>記事一覧</h1>
-    <div class="flex flex-col gap-4">
-      {
-        pages.map((page) => {
-          return (
-            <div class="bg-neutral-900 shadow shadow-neutral-700/50 rounded-lg p-2">
-              <a class="text-neutral-200" href={`/blog/${page.slug}`}>
-                <h2>{page.data.title}</h2>
-                <p class="mt-2 flex gap-4">
-                  <time datetime={page.data.pubDate.toISOString()}>
-                    公開日{page.data.pubDate.toLocaleDateString("ja-jp")}
-                  </time>
-                  <time datetime={page.data.updatedDate.toISOString()}>
-                    更新日{page.data.updatedDate.toLocaleDateString("ja-jp")}
-                  </time>
-                </p>
-                <p>
-                  {page.data.tags.map((tag: string) => {
-                    return <span>#{tag}</span>;
-                  })}
-                </p>
-              </a>
-            </div>
-          );
-        })
-      }
-    </div>
+    <ArticleList />
   </article>
 </Layout>
 

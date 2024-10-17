@@ -2,22 +2,25 @@
 
 ---
 
-<div class="h-12 header-menu">
-  <nav
-    class="bg-gray-900/50 backdrop-blur fixed w-full flex justify-center items-center h-12 z-10"
-  >
-    <ul class="gap-7 flex">
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/blog">Blog</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+<nav
+  class="header-menu bg-gray-900/50 backdrop-blur fixed w-full flex justify-center items-center h-12"
+>
+  <ul class="gap-7 flex z-[30]">
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/blog">Blog</a>
+    </li>
+  </ul>
+</nav>
+<div class="h-12"></div>
 
 <style>
+  nav {
+    z-index: 30 !important;
+  }
+
   .header-menu ul li {
     list-style: none;
   }

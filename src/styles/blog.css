@@ -1,16 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+* {
+  @apply z-[20];
+}
+
 body {
   @apply bg-neutral-950;
 }
 
 main {
-  @apply py-2 max-w-[800px] w-full mx-auto;
+  @apply py-2 max-w-[800px] w-full mx-auto flex flex-col gap-6;
+}
+
+article {
+  @apply py-2 rounded-lg bg-zinc-900 px-6 z-[1];
 }
 
 .blog-article {
-  @apply px-6 relative;
-
   * {
     @apply text-base text-neutral-200;
+    font-family: "Noto Sans JP", "ヒラギノ角ゴシック", "游ゴシック", sans-serif;
   }
 
   a {
@@ -56,7 +65,7 @@ main {
     );
 
     /* 見た目 */
-    @apply text-4xl relative z-[-1];
+    @apply text-4xl relative z-[2];
 
     &::before {
       content: "C";
@@ -67,7 +76,7 @@ main {
       @apply py-1 px-4 left-0 right-0;
 
       /* 見た目 */
-      @apply text-transparent bg-neutral-900 border-l-4 border-emerald-600 z-[-2];
+      @apply text-transparent bg-neutral-800 border-l-4 border-emerald-600 z-[-1];
     }
   }
 
@@ -85,7 +94,7 @@ main {
     );
 
     /* 見た目 */
-    @apply text-3xl relative z-[-1];
+    @apply text-3xl relative z-[2];
 
     &::before {
       content: "C";
@@ -96,7 +105,7 @@ main {
       @apply py-1 px-4 left-0 right-0;
 
       /* 見た目 */
-      @apply text-transparent bg-neutral-900 border-l-4 border-emerald-600 z-[-2];
+      @apply text-transparent bg-neutral-800 border-l-4 border-emerald-600 z-[-1];
     }
   }
 
@@ -114,7 +123,7 @@ main {
     );
 
     /* 見た目 */
-    @apply text-2xl relative z-[-1];
+    @apply text-2xl relative z-[2];
 
     &::before {
       content: "C";
@@ -125,10 +134,8 @@ main {
       @apply py-1 px-4 left-0 right-0;
 
       /* 見た目 */
-      @apply text-transparent bg-neutral-900 border-l-4 border-emerald-600 z-[-2];
+      @apply text-transparent bg-neutral-800 border-l-4 border-emerald-600 z-[-1];
     }
-
-    /* @apply text-2xl my-3 py-1 px-4 bg-neutral-900 border-l-4 border-emerald-800; */
   }
 
   blockquote {
@@ -146,8 +153,12 @@ main {
     mask-size: contain;
   }
 
+  /* 目次 */
+  .toc {
+  }
+
   .top-button {
-    @apply fixed right-4 bottom-4 bg-neutral-200 w-10 h-10 rounded-full;
+    @apply fixed left-4 bottom-4 bg-neutral-200 w-10 h-10 rounded-full;
     & img {
       @apply w-full h-full p-2;
     }
