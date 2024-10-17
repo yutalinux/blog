@@ -5,12 +5,10 @@ import "../styles/blog.css";
 
 const pages: any[] = await getCollection("blog");
 pages.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-
-console.log(pages);
 ---
 
 <Layout title="Blog">
-  <main>
+  <article>
     <h1>記事一覧</h1>
     <ul>
       {
@@ -23,5 +21,5 @@ console.log(pages);
         })
       }
     </ul>
-  </main>
+  </article>
 </Layout>

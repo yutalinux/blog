@@ -7,7 +7,7 @@ main * {
 }
 
 main {
-  @apply py-2 w-[max(800px,80vw)] mx-auto;
+  @apply py-2 max-w-[800px] w-full mx-auto;
 }
 
 article {
