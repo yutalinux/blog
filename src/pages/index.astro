@@ -1,15 +1,18 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
-const allPages = await Astro.glob("../contents/*.md");
+const pages: any[] = await getCollection("blog");
+
+console.log(pages);
 ---
 
 <Layout title="Blog">
   {
-    allPages.map((page) => {
+    pages.map((page) => {
       return (
-        <a href={page.url}>
+        <a href={`/blog/${page.slug}`}>
           <div>
-            <h3>{page.frontmatter.title}</h3>
+            <h3>{page.data.title}</h3>
           </div>
         </a>
       );
