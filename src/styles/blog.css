@@ -218,7 +218,7 @@ article {
 
   /* トップに戻るボタン */
   .top-button {
-    @apply fixed left-4 bottom-4 bg-neutral-200 w-10 h-10 rounded-full z-[50];
+    @apply fixed bottom-4 bg-neutral-200 w-10 h-10 rounded-full z-[50];
     & img {
       @apply w-full h-full p-2;
     }
