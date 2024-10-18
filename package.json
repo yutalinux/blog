@@ -6,7 +6,6 @@
   "packageManager": "pnpm@latest",
   "scripts": {
     "dev": "astro dev",
-    "edit": "tsx watch src/editor.ts",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
