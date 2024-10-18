@@ -2,7 +2,7 @@
   function scrollToHeading() {
     const a_all = document.querySelectorAll('a[href^="#"]');
 
-    a_all.forEach((a, index) => {
+    a_all.forEach((a) => {
       a.addEventListener("click", (e) => {
         e.preventDefault();
 
@@ -12,9 +12,6 @@
           href[href.length - 1]
         ) as HTMLElement;
 
-        console.log(href[href.length - 1]);
-        console.log(scrollTarget);
-
         window.scrollTo({
           behavior: "smooth",
           top: scrollTarget.offsetTop,
@@ -23,8 +20,6 @@
       });
     });
   }
-
-  console.log("test");
 
   window.addEventListener("load", () => {
     scrollToHeading();

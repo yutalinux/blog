@@ -1,58 +1,112 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
 
+/* 参考: https://zenn.dev/web_tips/articles/f1167f4314dcb3 */
+
+/* --- テンプレート --- */
+/* 視覚整形モデル */
+/* ボックスモデル */
+/* 色 */
+/* フォント */
+/* 表 */
+/* UI */
+/* アニメーション */
+/* その他 */
+
 * {
-  @apply z-[5];
-  @apply relative;
+  /* 視覚整形モデル */
+  @apply relative z-[5];
 }
 
 body {
+  /* 色 */
   @apply bg-neutral-950;
 }
 
 main {
-  @apply py-4 max-w-[800px] w-full mx-auto flex flex-col gap-6;
+  /* 視覚整形モデル */
+  @apply flex flex-col gap-6;
+
+  /* ボックスモデル */
+  @apply mx-auto py-4 max-w-[800px] w-full;
+
+  /* 色 */
+  @apply bg-neutral-950;
 }
 
 article {
-  @apply py-2 rounded-lg bg-zinc-900 px-6 z-[1];
+  /* 視覚整形モデル */
+  @apply z-[1];
+
+  /* ボックスモデル */
+  @apply px-6 py-2 rounded-lg;
+
+  /* 色 */
+  @apply bg-zinc-900;
 }
 
 .blog-article {
   * {
-    @apply text-base text-neutral-200;
+    /* 色 */
+    @apply text-neutral-200;
+
+    /* フォント */
+    @apply text-base;
     font-family: "Noto Sans JP", "ヒラギノ角ゴシック", "游ゴシック", sans-serif;
   }
 
   a {
-    @apply text-emerald-600 transition-colors duration-200;
+    /* 色 */
+    @apply text-emerald-600;
+
+    /* アニメーション */
+    @apply transition-colors duration-200;
 
     &:hover {
+      /* 色 */
       @apply text-emerald-500;
     }
   }
 
   pre {
-    @apply p-5 relative;
+    /* 視覚整形モデル */
+    @apply p-5 pt-11;
+
+    /* ボックスモデル */
+    @apply relative;
   }
 
-  pre .copy-code {
-    @apply absolute right-0 top-0 bg-blue-900 px-1;
+  .copy-code {
+    /* 視覚整形モデル */
+    @apply absolute w-full;
+
+    /* ボックスモデル */
+    @apply px-1;
+
+    /* 色 */
+    @apply bg-blue-900;
   }
 
   ul,
   ol {
+    /* ボックスモデル */
     @apply pl-5;
   }
 
   ul li {
+    /* 視覚整形モデル */
     @apply list-disc;
   }
 
   ol li {
+    /* 視覚整形モデル */
     @apply list-decimal;
   }
 
   h1 {
+    /* ボックスモデル */
+    @apply my-4;
+
+    /* フォント */
     @apply text-5xl my-4;
   }
 
@@ -162,8 +216,9 @@ article {
   .toc {
   }
 
+  /* トップに戻るボタン */
   .top-button {
-    @apply fixed left-4 bottom-4 bg-neutral-200 w-10 h-10 rounded-full;
+    @apply fixed left-4 bottom-4 bg-neutral-200 w-10 h-10 rounded-full z-[50];
     & img {
       @apply w-full h-full p-2;
     }

@@ -1,15 +1,14 @@
 ---
 import Layout from "./Layout.astro";
 import ArticleHeader from "../components/ArticleHeader.astro";
-import ArticleList from "../components/ArticleList.astro";
-import CodeBlock from "../components/CodeBlock.astro";
+import { PreCode } from "../components/PreCode";
 
-const { title, description, pubDate, updatedDate, tags, slug } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <Layout title={title}>
   <article class="blog-article">
-    <CodeBlock />
+    <PreCode client:only />
     <a href="#top" class="top-button">
       <img src="/blog/arrow-upward.svg" />
     </a>
