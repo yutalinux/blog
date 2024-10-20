@@ -4,16 +4,13 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 
 import sitemap from "@astrojs/sitemap";
-
-import mdx from "@astrojs/mdx";
-
 import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://yutalinux.github.io",
   base: "/blog",
-  integrations: [tailwind(), sitemap(), mdx(), react()],
+  integrations: [tailwind(), sitemap(), react()],
   markdown: {
     rehypePlugins: [
       "rehype-slug",
@@ -32,7 +29,6 @@ export default defineConfig({
           },
         },
       ],
-      ["@jsdevtools/rehype-toc", { headings: ["h2", "h3", "h4"] }],
     ],
   },
 });

@@ -6,7 +6,7 @@ description: "マークダウンにスタイルが適応されていることを
 tags: ["development"]
 ---
 
-## フォントチェック
+## フォント
 
 漢字
 
@@ -46,10 +46,12 @@ https://yutalinux.github.io/blog
 
 ## コード
 
-`コード`
-
 ```js
 let x = 0;
+```
+
+```python
+x = 0
 ```
 
 ## リスト

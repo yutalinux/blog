@@ -16,7 +16,6 @@ export function PreCode() {
         const code = pre.innerText;
         const rect = pre.getBoundingClientRect();
         if (!divRect) return <></>;
-        console.log(rect.top, divRect.top);
         return (
           <PreCodeButton key={index} code={code} top={rect.top - divRect.top} />
         );

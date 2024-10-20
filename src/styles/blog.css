@@ -52,6 +52,7 @@ article {
     /* フォント */
     @apply text-base;
     font-family: "Noto Sans JP", "ヒラギノ角ゴシック", "游ゴシック", sans-serif;
+    @apply mb-1;
   }
 
   a {
